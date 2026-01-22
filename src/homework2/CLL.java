@@ -4,10 +4,7 @@
  */
 package homework2;
 
-/**
- *
- * @author rrec1
- */
+
 class CNode<E> {
     E data;
     CNode<E> next;

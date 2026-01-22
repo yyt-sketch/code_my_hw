@@ -5,10 +5,7 @@
 package homework2;
 import java.util.Random;
 
-/**
- *
- * @author rrec1
- */
+
 public class hw {
     //السؤال رقم(2) 
     // إزالة عنصر عشوائي من مصفوفة وترجع مصفوفة جديدة
