@@ -1,0 +1,19 @@
+package DoublyLinkedList;
+
+public class Main {
+    public static void main(String[] args) {
+        DoublyLinkedList<Integer> dlist=new DoublyLinkedList<Integer>();
+        dlist.addFirst(10);
+        dlist.addFirst(20);
+        dlist.addLast(30);
+        dlist.addLast(40);
+        dlist.removeFirst();
+        dlist.removeLast();
+        dlist.display();    ///////  null<---head<--->10<-->30<-->tail-->null
+
+
+
+
+
+    }
+}
