@@ -2,7 +2,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package homework2;
+package homework1;
+
 
 class CNode<E> {
     E data;
@@ -14,18 +15,18 @@ class CNode<E> {
     }
 }
 
-public class dd<E> {
+public class CLL<E> {
     private CNode<E> head;
     private CNode<E> tail;
     private int size;
     
-    public dd() {
+    public CLL() {
         this.head = null;
         this.tail = null;
         this.size = 0;
     }
     
-    // Getters
+
     public CNode<E> getHead() {
         return head;
     }
@@ -41,16 +42,19 @@ public class dd<E> {
     public boolean isEmpty() {
         return head == null;
     }
-     public void setTail(CNode<E> newTail) {
-        this.tail = newTail;
-        // إذا تغير الذيل، تأكد من دائرية القائمة
-        if (newTail != null && head != null) {
-            newTail.next = head;
-        }
-        // لا نحدث الحجم هنا، لأن setHead سيفعل ذلك
+    
+    
+    public void setHead(CNode<E> newHead) {
+        this.head = newHead;
     }
     
-    // واحدة لتعديل الحجم
+    public void setTail(CNode<E> newTail) {
+        this.tail = newTail;
+        if (tail != null && head != null) {
+            tail.next = head;
+        }
+    }
+    
     public void setSize(int newSize) {
         this.size = newSize;
     }
@@ -87,24 +91,21 @@ public class dd<E> {
         size++;
     }
     
-    // الأساسية: الطباعة بدون نصوص إضافية
+    // : الطباعة
     public void printList() {
         if (isEmpty()) {
-            System.out.println();
+            System.out.println("القائمة فارغة");
             return;
         }
         
         CNode<E> current = head;
-        int count = 0;
-        
         do {
             System.out.print(current.data);
-            if (current.next != head) {
+            current = current.next;
+            if (current != head) {
                 System.out.print(" → ");
             }
-            current = current.next;
-            count++;
-        } while (current != head && count < size * 2); // حماية
+        } while (current != head);
         System.out.println();
     }
 }
