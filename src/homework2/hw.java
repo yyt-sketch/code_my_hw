@@ -4,9 +4,6 @@
  */
 package homework2;
 import java.util.Random;
-/*
-علي الهادي امن سبراني مج(2)  
-*/
 
 public class hw {
     //السؤال رقم(2) 
